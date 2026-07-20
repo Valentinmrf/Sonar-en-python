@@ -4,3 +4,5 @@ Le programme simule un capteur fixe placé au centre de l'écran. Une aiguille b
 Dans cette première version, un seul obstacle est géré, à des coordonnées fixes écrites directement dans le code (facilement modifiables).
 
 Dans la 2ème version, le système d'obstacle n'a pas changé. Les seuls changement sont visuel, l'ajout d'une trainée derrière l'aiguille en réalisant un dégradée de la couleur de l'aiguille ainsi qu'un dégradé de l'opacité.
+
+Dans la 3ème version il y a 3 obstacles qui apparaissent avec des coordonnées aléatoire, le sonar est capable de les détecter 1 par 1.
