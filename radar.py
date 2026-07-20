@@ -33,7 +33,7 @@ while running :
             running = False
 
 #---------- Aiguille ---------
-    angle += 0.15
+    angle += 0.05
     if angle >= 360:
         angle -= 360
     x2 = capteur_x + distance * math.cos(math.radians(angle))
@@ -41,19 +41,6 @@ while running :
 
     fenetre.blit(sonar, position_perso)
     aiguille = pygame.draw.line(fenetre, [0, 225, 75], (capteur_x, capteur_y), (x2, y2), 3)
-
-#---------- Trainée de l'aiguille ----------
-    fenetre.blit(transparente, (0, 0))
-    for i in range(70):
-        angle_trainee = angle - 0.5 * i
-        print(angle_trainee)
-        
-        x_trainee = capteur_x + distance * math.cos(math.radians(angle_trainee))
-        y_trainee = capteur_y + distance * math.sin(math.radians(angle_trainee))
-
-        vert_trainee = int(225 - i*(225/70))
-        opacite = int(225 - i * (225/70))
-        pygame.draw.line(transparente, [0, vert_trainee, 30, opacite], (capteur_x, capteur_y), (x_trainee, y_trainee), 3)
 
 #---------- Détection des obstacles --------
     dx = obstacle_x - capteur_x
